@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [
+          ['$', '$'],
+          ['\\(', '\\)']
+        ]
+      }
+    };
+  </script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  </script>
+
+  <title>Realistic one-shot mesh-based head avatars</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="static/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="static/vendor/simple-line-icons/css/simple-line-icons.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="static/css/landing-page.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/bulma-carousel.min.js"></script>
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor//bulma-slider.min.js"></script>
+  <script src="static/vendor/nerfies.js"></script>
+
+</head>
+
+<body>
+
+
+
+  <!-- Masthead -->
+  <!-- <header class="masthead text-center bg-light">
+  <div class="overlay"></div>
+    <div class="container">
+    <div class="row">
+      <div class="col-xl-10 mx-auto">
+          <h1 class="title is-1 publication-title">Realistic one-shot mesh-based head avatars</h1>
+    </div>
+  </div>
+  </div>
+  </header> -->
+
+  <section class="hero">
+    <div class="hero-body">
+
+  <div class="container has-text-centered">
+    <h1 class="title is-1 publication-title">
+      Realistic one-shot mesh-based head avatars
+    </h1>
+    <div class="is-size-4 publication-authors">
+      <div class="author-block">
+        <div class="author-portrait">
+          <video class="rgb" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/taras_rgb.mp4" type="video/mp4"/>
+          </video>
+          <video class="depth" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/taras_normal.mp4" type="video/mp4"/>
+          </video>
+          <!-- <img src="./static/videos/portraits/barron_rgb.mp4"  type="video/mp4" /> -->
+        </div>
+        <a href="mailto:t.khakhulinATgmailDOTcom">Taras Khakhulin</a><sup>1,2</sup></div>
+      <div class="author-block">
+        <div class="author-portrait">
+          <video class="rgb" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/vanessa_rgb.mp4" type="video/mp4"/>
+          </video>
+          <video class="depth" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/vanessa_normal.mp4" type="video/mp4"/>
+          </video>
+        </div>
+        <a href="mailto:vanessa.sklyarova@skoltech.ru">Vanessa Sklyarova</a><sup>1,2</sup></div>
+      <div class="author-block">
+        <div class="author-portrait">
+          <video class="rgb" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/victor_rgb.mp4" type="video/mp4"/>
+          </video>
+          <video class="depth" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/victor_normal.mp4" type="video/mp4"/>
+          </video>
+        </div>
+        <a href="https://scholar.google.ru/citations?user=gYYVokYAAAAJ">Victor Lempitsky</a><sup>3</sup></div>
+      <div class="author-block">
+        <div class="author-portrait">
+          <video class="rgb" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/egor_rgb.mp4" type="video/mp4"/>
+          </video>
+          <video class="depth" height="100%" loop muted width="100%">
+            <source src="static/videos/portraits/egor_normal.mp4" type="video/mp4"/>
+          </video>
+        </div>
+        <a href="https://scholar.google.ru/citations?user=wyF-PxIAAAAJ">Egor Zakharov</a><sup>1,2</sup>
+      </div>
+    </div>
+
+  
+
+
+        <div class="is-size-5 publication-authors">
+          <span class="author-block"><sup>1</sup><a href="https://research.samsung.com/aicenter_moscow">Samsung AI Center Moscow</a></span><br>
+          <span class="author-block"><sup>2</sup><a href="https://www.skoltech.ru/en/">Skolkovo Institute of Science and Technology</a></span><br>
+          <span class="author-block"><sup>3</sup><a>Yandex Armenia</a></span><br>
+        </div>
+
+        <!--odiv <div class="is-size-4 publication-authors">
+        </>
+         -->
+  </section>
+  <!-- Icons Grid -->
+  <section class="features-icons bg-light text-center">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-4 ">
+          <a href="https://arxiv.org/abs/TODO" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+              <div class="features-icons-icon d-flex">
+                <i class="ai ai-arxiv m-auto text-primary"></i>
+              </div>
+              <h5>PDF (17 Mb)</h5>
+              <p class="mylead mb-0">Download from arXiv</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4 ">
+          <a href="./paper/rome.pdf" 
+          class="external-link  is-normal is-rounded"
+           style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-2 mb-lg-0 mb-lg-2">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-file-text m-auto text-primary"></i>
+                <!-- <i class="fa fa-camera m-auto text-primary"></i> -->
+              </div>
+
+              <h5>PDF (0.7 Mb)</h5>
+              <p class="mylead mb-0">Compressed version</p>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-lg-4">
+          <a href="https://github.com/SamsungLabs/rome" style="text-decoration : none; color : #000000;">
+            <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-1">
+              <div class="features-icons-icon d-flex">
+                <i class="fa fa-github m-auto text-primary"></i>
+              </div>
+              <h5>Code</h5>
+              <p class="mylead mb-0">Available soon</p>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+
+
+
+  <section class="section">
+    <div class="container">
+
+      <div class="row">
+
+        <div class="is-centered">
+
+          <div class="content  is-centered has-text-centered">
+            <h2 class="title is-3">Abstract</h2>
+          </div>
+
+
+          <div class="content has-text-justified">
+
+            <p class="lead mb-0" align="justify">
+              We present a system for the creation of realistic one-shot mesh-based (ROME) human head avatars.
+              From a single photograph, our system estimates the head mesh (with person-specific details in both the facial and non-facial head parts) as well as the neural texture encoding, local photometric and geometric details. 
+              The resulting avatars are rigged and can be rendered using a deep rendering network, which is trained alongside the mesh and texture estimators on a dataset of in-the-wild videos. 
+              In the experiments, we observe that our system performs competitively both in terms of head geometry recovery and the quality of renders, especially for cross-person reenactment.
+            </p>
+            <p class="lead mb-0" align="justify">
+            </p>
+            <p class="lead mb-0" align="justify">
+            </p>
+        </div>
+
+        
+
+        <div class="content has-text-centered">
+          <h2 class="title is-4">Main idea</h2>
+        </div>
+
+        <div>
+          <center>
+            <div class="row">
+              <div class="offset-lg-2 col-lg-8 text-white">
+                <img class="img-fluid mb-3" src="static/images/method_scheme.jpg" alt="" >
+              </div>
+            </div>
+        </div>
+
+      <div class="content has-text-justified is-four-fifths">
+        <p>
+          We use a neural texture map to represent both the geometry and appearance.
+          This texture is estimated from a single source image by a texture encoder.
+          Also, we estimate facial blendshape parameters, and the camera parameters from both the source and the driving images using a pre-trained system for facial reconstruction (e.g. <a href="https://arxiv.org/abs/2012.04012">DECA</a>).          
+        </p>
+        <p>
+          Both the neural texture and the head mesh are fed into our head reconstruction pipeline, which predicts displacements to the input head mesh. 
+          We use a combination of a geometry autoencoding network that produces latent geometry features, and a local geometry decoding MLP to predict displacements. 
+          These displacements reconstruct the geometry, such as hair and shoulders. 
+        </p>      
+        <p>
+          The reconstructed mesh is then used for neural rendering to produce photo-realistic images.
+          We use a standard <a href="https://arxiv.org/abs/1904.12356">deferred neural rendering</a> pipeline, which renders a neural texture instead of a regular RGB texture, and decodes it into the image via an image-to-image network.
+         </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+
+
+
+
+
+
+
+  <section class="hero">
+
+    <div class="hero-body">
+  </section>
+
+
+  <section class="section">
+    
+    <div class="container">
+          <div class=" is-centered ">
+            <!-- <div class="row" > -->
+            <div class="column is-centered">
+                <div class="item is-centered">
+                  <video poster="" id="blocks" autoplay controls muted loop  height="50%">
+                    <source src="static/videos/results/rome_cmp.mp4" type="video/mp4">
+                  </video>
+                </div>
+            </div>
+            <!-- Note all images from wikimedia. -->
+    </div>
+
+    <div class="container">
+      <div class="content  is-centered has-text-centered">
+        <h3 class="title is-3">Video Comparision</h3>
+      </div>
+
+    <div class="columns is-centered">
+
+        <div class="column">
+          <h3 class="title is-4">Self-reenactment</h3>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+              </p>
+              <video id="matting-video" autoplay controls loop height="100%">
+                <source src="static/videos/results/self-reenactment.mp4" type="video/mp4">
+              </video>
+            </div>
+  
+          </div>
+        </div>
+
+        <div class="column">
+          <h3 class="title is-4">Cross-reenactment</h3>
+          <div class="columns is-centered">
+            <div class="column content">
+              <p>
+              </p>
+              <video id="matting-video" autoplay controls  loop height="100%">
+                <source src="static/videos/results/cross-reenactment.mp4" type="video/mp4">
+              </video>
+            </div>
+  
+          </div>
+        </div>
+    </div>
+    <br><br>
+    <hr>
+  </div>
+
+  <div class="container">
+
+    In addition to our full non-linear model introduced above, we also consider a simplified parametric model with a linear basis of offsets ∆v.
+     While this model is similar to parametric models (RingNet), we still do not use 3D scans for training and rather obtain our linear model by “distilling” our non-linear model. 
+     We train a feedforward regressor that predicts the linear coefficients from an input image than 10 times faster than full ROME.
+      
+     <p> 
+
+     </p>
+  <div class="columns is-centered">
+
+    <div class="column">
+      <div class="columns is-centered">
+        <div class="column content">
+          <p>
+          </p>
+          <video id="matting-video" autoplay controls loop height="100%">
+            <source src="static/videos/results/distill_concat.mp4" type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="column">
+      <div class="columns is-centered">
+        <div class="column content">
+      
+            <h3>Distilation Results </h3>
+              <p> 
+                Here we show how to integrate our distilled linear model with existing parametric models.
+              </p>
+          <div class="text-white">
+            <img class="img-fluid mb-3" src="static/images/adaptability.png" alt="" >
+          </div>
+        </div>
+
+      </div>
+    </div>
+  
+
+</div>
+
+  </div>
+
+  
+
+  <section class="section" id="BibTeX">
+    <div class="container content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+      @article{Khakhulin2022ROME,
+                author    = {}
+                title     = {},
+                journal   = {arXiv preprint arXiv:TODO},
+                year      = {2022},
+      }
+    </code></pre>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+          <p class="footer-text mb-4 mb-lg-0">ROME</p>
+
+          <div class="columns">
+            <div class="content footer-text col-lg-8 h-60">
+                This website is based on <a href="https://nerfies.github.io">nerfies</a>.
+            </div>
+          </div>
+          
+        </div>
+   
+        <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item mr-3">
+              <a href="https://arxiv.org/abs/TODO" class="footer-icon">
+                  <i class="ai ai-arxiv"></i>
+              </a>
+            </li>
+            <li class="list-inline-item mr-3">
+              <a href="./paper/rome.pdf" class="footer-icon">
+                <i class="fa fa-file-image-o"></i>
+              </a>
+            </li>
+            
+            <li class="list-inline-item">
+              <a href="https://github.com/SamsungLabs/rome" class="footer-icon">
+                <i class="fa fa-git"></i>
+              </a>
+            </li>
+            <li class="list-inline-item">
+              <a href="./cite.txt" class="footer-icon">
+                <i class="icon-graduation"></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+    </div>
+
+
+  </footer>
+
+
+</body>
+
+</html>
