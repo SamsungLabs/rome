@@ -218,13 +218,13 @@
     <div class="container">
       <div class=" is-centered ">
         <!-- <div class="row" > -->
-        <div class="column is-centered">
-            <div class="item is-centered">
-              <video poster="" id="blocks" autoplay controls muted loop  height="50%">
-                <source src="static/videos/results/heads_talking1.mp4" type="video/mp4">
-              </video>
-            </div>
-        </div>
+<!--        <div class="column is-centered">-->
+<!--            <div class="item is-centered">-->
+<!--              <video poster="" id="blocks" autoplay controls muted loop  height="50%">-->
+<!--                <source src="static/videos/results/heads_talking1.mp4" type="video/mp4">-->
+<!--              </video>-->
+<!--            </div>-->
+<!--        </div>-->
     </div>
 
         <div class="content has-text-centered">
@@ -244,13 +244,13 @@
         <p>
           We use a neural texture map to represent both the geometry and appearance.
           This texture is estimated from a single source image by a texture encoder.
-          Also, we estimate facial blendshape parameters, and the camera parameters from both the source and the driving images using a pre-trained system for facial reconstruction (e.g. <a href="https://arxiv.org/abs/2012.04012">DECA</a>).          
+          Also, we estimate facial blendshape parameters, and the camera parameters from both the source and the driving images using a pre-trained system for facial reconstruction (e.g. <a href="https://arxiv.org/abs/2012.04012">DECA</a>).
         </p>
         <p>
-          Both the neural texture and the head mesh are fed into our head reconstruction pipeline, which predicts displacements to the input head mesh. 
-          We use a combination of a geometry autoencoding network that produces latent geometry features, and a local geometry decoding MLP to predict displacements. 
-          These displacements reconstruct the geometry, such as hair and shoulders. 
-        </p>      
+          Both the neural texture and the head mesh are fed into our head reconstruction pipeline, which predicts displacements to the input head mesh.
+          We use a combination of a geometry autoencoding network that produces latent geometry features, and a local geometry decoding MLP to predict displacements.
+          These displacements reconstruct the geometry, such as hair and shoulders.
+        </p>
         <p>
           The reconstructed mesh is then used for neural rendering to produce photo-realistic images.
           We use a standard <a href="https://arxiv.org/abs/1904.12356">deferred neural rendering</a> pipeline, which renders a neural texture instead of a regular RGB texture, and decodes it into the image via an image-to-image network.
