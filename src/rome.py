@@ -22,6 +22,10 @@ class ROME(nn.Module):
 
         parser.add_argument('--model_image_size', default=256, type=int)
 
+        parser.add_argument('--align_source', default='True', type=args_utils.str2bool, choices=[True, False])
+        parser.add_argument('--align_target', default='False', type=args_utils.str2bool, choices=[True, False])
+        parser.add_argument('--align_scale', default=1.25, type=float)
+
         parser.add_argument('--use_mesh_deformations', default='False', type=args_utils.str2bool, choices=[True, False])
         parser.add_argument('--subdivide_mesh', default='False', type=args_utils.str2bool, choices=[True, False])
         parser.add_argument('--renderer_sigma', default=1e-8, type=float)
