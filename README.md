@@ -24,10 +24,10 @@ Also, it can be replaced by another parametric model.
 Initialise submodules and download [DECA](https://github.com/YadiraF/DECA) & [MODNet](https://github.com/ZHKKKe/MODNet) weights
 
 ```sh
-git init --recursive submodules
+git submodule update --init --recursive
 ```
 
-Install requirements and download ROME model: [dropbox](), [gDrive](https://drive.google.com/file/d/1ao4-wYu8eRYbVklMB3Hrz2LAAfE4TsP6/view?usp=sharing), [y-disk](https://disk.yandex.ru/d/zfGijJPCbgNHUQ). 
+Install requirements and download ROME model: [gDrive](https://drive.google.com/file/d/1ao4-wYu8eRYbVklMB3Hrz2LAAfE4TsP6/view?usp=sharing), [y-disk](https://disk.yandex.ru/d/zfGijJPCbgNHUQ). 
 
 Put model into ```data``` folder.
 

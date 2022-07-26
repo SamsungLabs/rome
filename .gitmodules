@@ -1,7 +1,6 @@
 [submodule "DECA"]
 	path = DECA
 	url = https://github.com/khakhulin/DECA.git
-
 [submodule "MODNet"]
 	path = MODNet
 	url = https://github.com/ZHKKKe/MODNet
