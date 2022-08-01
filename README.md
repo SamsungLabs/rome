@@ -64,8 +64,8 @@ Also we acknowledge additional projects that were essential and speed up the dev
 If you found this code helpful, please consider citing: 
 
 ```
-@inproceedings{Khakhulin2022ROME
-  author    = {Khakhulin, Taras and Sklyarova,  Vanessa and Lempitsky, Victor and Zakharov, Egor}
+@inproceedings{Khakhulin2022ROME,
+  author    = {Khakhulin, Taras and Sklyarova,  Vanessa and Lempitsky, Victor and Zakharov, Egor},
   title     = {Realistic One-shot Mesh-based Head Avatars},
   booktitle = {European Conference of Computer vision (ECCV)},
   year      = {2022}
