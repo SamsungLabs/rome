@@ -169,7 +169,8 @@ class ParametricAvatar(DECA):
             self.online_regressor.eval()
 
         # Load basis
-        self.u_full = torch.load(os.path.join(f'{self.external_params["rome_data_dir"]}', 'u_full.pt')).to(self.device)
+        self.u_full = torch.load(os.path.join(f'{self.external_params["rome_data_dir"]}',
+                                              'u_full.pt'), map_location='cpu').to(self.device)
         # Create mean deforms
         self.mean_deforms = torch.load(
             os.path.join(f'{self.external_params["rome_data_dir"]}', 'mean_deform.pt'),
