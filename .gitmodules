@@ -4,3 +4,6 @@
 [submodule "MODNet"]
 	path = MODNet
 	url = https://github.com/ZHKKKe/MODNet
+[submodule "face-parsing.PyTorch"]
+	path = face-parsing.PyTorch
+	url = https://github.com/zllrunning/face-parsing.PyTorch
