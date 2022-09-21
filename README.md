@@ -27,7 +27,7 @@ Initialise submodules and download [DECA](https://github.com/YadiraF/DECA) & [MO
 git submodule update --init --recursive
 ```
 
-Install requirements and download ROME model: [gDrive](https://drive.google.com/file/d/1ao4-wYu8eRYbVklMB3Hrz2LAAfE4TsP6/view?usp=sharing), [y-disk](https://disk.yandex.ru/d/zfGijJPCbgNHUQ). 
+Install requirements and download ROME model: [gDrive](https://drive.google.com/file/d/1rLtc037Ra6Z6t0kp-gJ8P1ZKfzkKm070/view?usp=sharing), [y-disk](https://disk.yandex.ru/d/zfGijJPCbgNHUQ). 
 
 Put model into ```data``` folder.
 
@@ -37,7 +37,7 @@ To verify the code with images run:
 python3 infer.py --deca DECA --rome data
 ```
 
-For linear basis download ROME model: [gDrive](https://drive.google.com/file/d/1CPZuQFQhjvWHzkonRxeLFLYA1mlTaXXv/view?usp=sharing) (or camera model for voxceleb [gDrive](https://drive.google.com/file/d/1TpOXsmBZxHNVX6cRFiZ3A1uNzFscA-Yd/view?usp=sharing)), [yDrive](https://disk.yandex.ru/d/u2hRXJGewJoCwQ)
+For linear basis download ROME model: [gDrive](https://drive.google.com/file/d/1rLtc037Ra6Z6t0kp-gJ8P1ZKfzkKm070/view?usp=sharing) (or camera model for voxceleb [gDrive](https://drive.google.com/file/d/1PXU96qfiCzaLxTS1TZKgoJZcwJ0n-mh6/view?usp=sharing)), [yDrive](https://disk.yandex.ru/d/u2hRXJGewJoCwQ)
 
 ```python
 python3 infer.py --deca DECA --rome data  --use_distill True
